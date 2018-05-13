@@ -1,0 +1,16 @@
+.lang {
+  background: url(../img/flags.png) no-repeat;
+  width: 25px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+      background-position: 30px;
+}
+
+.Russia {
+  background-position: -144px -268px;
+}
+
+.United.States {
+  background-position: -312px -315px;
+}
