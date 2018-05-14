@@ -18,12 +18,19 @@ class DashboardController extends Controller
             ->get();
 
     $tmp = []; //после применим array_count_values для получения количества сайтов по каждой стране
+    $pop = []; $binom = []; $native = [];
     foreach ($sites as $key => $value) {
        $tmp[] = $sites[$key]->name;
+       // if ($sites[$key]->type == 'pop') $pop[] = $sites[$key]->name;
+       // if ($sites[$key]->type == 'native') $native[] = $sites[$key]->name;
+       // if ($sites[$key]->type == 'binom') $binom[] = $sites[$key]->name;
 
     }
     $countSites   = count($tmp);
     $chartCountry = array_count_values($tmp);
+    // $chartCountryPop = array_count_values($pop);
+    // $chartCountryNative = array_count_values($native);
+    // $chartCountryBinom = array_count_values($binom);
 
     /**************************************************/
     /**************************************************/
@@ -82,7 +89,10 @@ class DashboardController extends Controller
       'chartArticleCategory' => $chartArticleCategory,
       'teasers' => $countTeasers,
       'chartTeasers' => $chartTeasers,
-      'chartArticles' => $chartArticles
+      'chartArticles' => $chartArticles,
+      // 'chartCountryPop' => $chartCountryPop,
+      // 'chartCountryNative' => $chartCountryNative,
+      // 'chartCountryBinom' => $chartCountryBinom
     ]);
   }
 

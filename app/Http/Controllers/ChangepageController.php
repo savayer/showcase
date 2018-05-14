@@ -28,7 +28,7 @@ class ChangepageController extends Controller
     } else if ($type_links == 'native') {
       $link = '{link|trauwt.com}/';
     } else if ($type_links == 'binom') {
-      $link = 'http://wttrack.com/click.php?lp=';
+      $link = 'http://wttrack.com/click.php?lp=1&to_offer=';
     }
 
     return view('change', [

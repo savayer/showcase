@@ -19,7 +19,7 @@ class PreviewController extends Controller
         } else if ($type_links == 'native') {
           $link = '{link|trauwt.com}/';
         } else if ($type_links == 'binom') {
-          $link = 'http://wttrack.com/click.php?lp=';
+          $link = 'http://wttrack.com/click.php?lp=1&to_offer=';
         }
         $categories = Category::all();
         $categoriesArray = array(
@@ -34,7 +34,7 @@ class PreviewController extends Controller
         $addjs = DB::table('sites')
                  ->where('id', $siteId)
                  ->get()[0]->addjs;
-                 
+
 
         $country = DB::table('sites')
                    ->select('countries.fullname')

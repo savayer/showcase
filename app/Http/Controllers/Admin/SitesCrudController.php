@@ -200,8 +200,10 @@ class SitesCrudController extends CrudController
 
 
 //$teasers - ВСЕ тизера принадлежащие текущему юзеру
-        foreach ($teasers as $key => $value) {  //получаем айдишники всех тизеров
-          $teasersKeys[] = $key;
+        if (!empty($teasers)) {
+          foreach ($teasers as $key => $value) {  //получаем айдишники всех тизеров
+            $teasersKeys[] = $key;
+          }
         }
         $teasers_update = [];
         $teasers_selected = [];
