@@ -15,6 +15,7 @@ Route::get('/api/articles', 'Api\ArticlesController@index');
 Route::get('/api/copysite', 'Api\CopyController@site');
 Route::get('/api/copy_teaser', 'Api\CopyTeaserController@index');
 
+Route::get('admin/statistic', 'StatisticController@index');
 Route::get('admin/dashboard', 'DashboardController@index');
 
 Route::get('/', function () {

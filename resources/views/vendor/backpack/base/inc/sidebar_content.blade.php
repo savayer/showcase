@@ -1,4 +1,7 @@
 <!-- This file is used to store sidebar items, starting with Backpack\Base 0.9.0 -->
+@if (auth()->user()->id == 1)
+<li><a href="{{ backpack_url('statistic') }}"><i class="fa fa-dashboard"></i> <span>Статистика</span></a></li>
+@endif
 <li><a href="{{ backpack_url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 <!-- <li><a href="{{ backpack_url('tag') }}"><i class="fa fa-file"></i> <span>Manage Tags</span></a></li> -->
 <li><a href="{{ backpack_url('teaser') }}"><i class="fa fa-file"></i> <span>{{ trans('backpack::base.teasers') }}</span></a></li>
