@@ -1,3 +1,3 @@
 # Витрины
 
-<img src="https://github.com/savayer/showcase/blob/master/showcase.png">
+<img src="https://raw.githubusercontent.com/savayer/showcase/master/showcase.png">
